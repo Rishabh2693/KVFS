@@ -1,0 +1,3148 @@
+
+kvfs_init()
+    conn:
+    proto_major = 7
+    proto_minor = 22
+    async_read = 1
+    max_write = 131072
+    max_readahead = 131072
+    capable = 00000ffb
+    want = 00000010
+    max_background = 0
+    congestion_threshold = 0
+    context:
+    fuse = 00ed84d0
+    uid = 0
+    gid = 0
+    pid = 0
+    private_data = 00ed7010
+    logfile = 00ed8040
+    rootdir = /home/kshitij/kvfs
+    umask = 00000
+
+kvfs_getattr_impl(path="/", statbuf=0xdbffebf0)
+FULLPATH
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686874
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1ac
+    st_ctime = 0x583df1ac
+
+kvfs_statfs_impl(path="/", statv=0xe0a87be0)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    statvfs returned 0
+    kvfs_fullpath:  path = "/"
+
+kvfs_access_impl(path="/")
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+
+kvfs_getattr_impl(path="9006f38d4e95b6c190dd066845c9487d", statbuf=0xe0a87c20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "9006f38d4e95b6c190dd066845c9487d", fpath = "/home/kshitij/kvfs/9006f38d4e95b6c190dd066845c9487d"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+kvfs_mknod_impl(path="9006f38d4e95b6c190dd066845c9487d", mode=0100664, dev=0)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "9006f38d4e95b6c190dd066845c9487d", fpath = "/home/kshitij/kvfs/9006f38d4e95b6c190dd066845c9487d"
+    open returned 5
+    close returned 0
+
+kvfs_getattr_impl(path="9006f38d4e95b6c190dd066845c9487d", statbuf=0xe0a87c20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "9006f38d4e95b6c190dd066845c9487d", fpath = "/home/kshitij/kvfs/9006f38d4e95b6c190dd066845c9487d"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686667
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_open_impl(path"9006f38d4e95b6c190dd066845c9487d", fi=0xdbffed10)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "9006f38d4e95b6c190dd066845c9487d", fpath = "/home/kshitij/kvfs/9006f38d4e95b6c190dd066845c9487d"
+    open returned 5
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+kvfs_flush(path="9006f38d4e95b6c190dd066845c9487d", fi=0xe0a87d10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x5a98e7a133bd0e3b
+
+kvfs_write_impl(path="9006f38d4e95b6c190dd066845c9487d", buf=0xe1a66060, size=60, offset=0, fi=0xe0a87d80)
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pwrite returned 60
+
+kvfs_flush(path="9006f38d4e95b6c190dd066845c9487d", fi=0xdbffed10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x5a98e7a133bd0e3b
+
+kvfs_release_impl(path="9006f38d4e95b6c190dd066845c9487d", fi=0xe0a87d10)
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+kvfs_getattr_impl(path="/", statbuf=0xdbffebf0)
+FULLPATH
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686874
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_open_impl(path"9006f38d4e95b6c190dd066845c9487d", fi=0xe0a87d10)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "9006f38d4e95b6c190dd066845c9487d", fpath = "/home/kshitij/kvfs/9006f38d4e95b6c190dd066845c9487d"
+    open returned 5
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+kvfs_getattr_impl(path="9006f38d4e95b6c190dd066845c9487d", statbuf=0xdbffebf0)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "9006f38d4e95b6c190dd066845c9487d", fpath = "/home/kshitij/kvfs/9006f38d4e95b6c190dd066845c9487d"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686667
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 60
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_read_impl(path="9006f38d4e95b6c190dd066845c9487d", buf=0xdc000dd0, size=4096, offset=0, fi=0xe0a87d10)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pread returned 60
+
+kvfs_fgetattr_impl(path="9006f38d4e95b6c190dd066845c9487d", statbuf=0xdbffebf0, fi=0xdbffed10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    si:
+    st_dev = 2050
+    st_ino = 6686667
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 60
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_flush(path="9006f38d4e95b6c190dd066845c9487d", fi=0xe0a87d10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0xf5cacaa69d436288
+
+kvfs_release_impl(path="9006f38d4e95b6c190dd066845c9487d", fi=0xdbffed10)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+kvfs_getattr_impl(path="2756dc575c8e40a128ecb8be76883f55", statbuf=0xe0a87c20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "2756dc575c8e40a128ecb8be76883f55", fpath = "/home/kshitij/kvfs/2756dc575c8e40a128ecb8be76883f55"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+kvfs_getattr_impl(path="2756dc575c8e40a128ecb8be76883f55", statbuf=0xdbffec20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "2756dc575c8e40a128ecb8be76883f55", fpath = "/home/kshitij/kvfs/2756dc575c8e40a128ecb8be76883f55"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+kvfs_getattr_impl(path="2756dc575c8e40a128ecb8be76883f55", statbuf=0xe0a87c20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "2756dc575c8e40a128ecb8be76883f55", fpath = "/home/kshitij/kvfs/2756dc575c8e40a128ecb8be76883f55"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+kvfs_rename_impl(fpath="9006f38d4e95b6c190dd066845c9487d", newpath="2756dc575c8e40a128ecb8be76883f55")
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "9006f38d4e95b6c190dd066845c9487d", fpath = "/home/kshitij/kvfs/9006f38d4e95b6c190dd066845c9487d"
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "2756dc575c8e40a128ecb8be76883f55", fpath = "/home/kshitij/kvfs/2756dc575c8e40a128ecb8be76883f55"
+    rename returned 0
+
+kvfs_getattr_impl(path="/", statbuf=0xe0a87bf0)
+FULLPATH
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686874
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_open_impl(path"2756dc575c8e40a128ecb8be76883f55", fi=0xdbffed10)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "2756dc575c8e40a128ecb8be76883f55", fpath = "/home/kshitij/kvfs/2756dc575c8e40a128ecb8be76883f55"
+    open returned 5
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+kvfs_getattr_impl(path="2756dc575c8e40a128ecb8be76883f55", statbuf=0xe0a87bf0)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "2756dc575c8e40a128ecb8be76883f55", fpath = "/home/kshitij/kvfs/2756dc575c8e40a128ecb8be76883f55"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686667
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 60
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_read_impl(path="2756dc575c8e40a128ecb8be76883f55", buf=0xd4000dc0, size=4096, offset=0, fi=0xdbffed10)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pread returned 60
+
+kvfs_fgetattr_impl(path="2756dc575c8e40a128ecb8be76883f55", statbuf=0xe0a87bf0, fi=0xe0a87d10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    si:
+    st_dev = 2050
+    st_ino = 6686667
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 60
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_flush(path="2756dc575c8e40a128ecb8be76883f55", fi=0xdbffed10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x3822355872df09c9
+
+kvfs_release_impl(path="2756dc575c8e40a128ecb8be76883f55", fi=0xe0a87d10)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+kvfs_getattr_impl(path="9006f38d4e95b6c190dd066845c9487d", statbuf=0xdbffec20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "9006f38d4e95b6c190dd066845c9487d", fpath = "/home/kshitij/kvfs/9006f38d4e95b6c190dd066845c9487d"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+kvfs_getattr_impl(path="9006f38d4e95b6c190dd066845c9487d", statbuf=0xe0a87c20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "9006f38d4e95b6c190dd066845c9487d", fpath = "/home/kshitij/kvfs/9006f38d4e95b6c190dd066845c9487d"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+kvfs_getattr_impl(path="9006f38d4e95b6c190dd066845c9487d", statbuf=0xdbffec20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "9006f38d4e95b6c190dd066845c9487d", fpath = "/home/kshitij/kvfs/9006f38d4e95b6c190dd066845c9487d"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+kvfs_rename_impl(fpath="2756dc575c8e40a128ecb8be76883f55", newpath="9006f38d4e95b6c190dd066845c9487d")
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "2756dc575c8e40a128ecb8be76883f55", fpath = "/home/kshitij/kvfs/2756dc575c8e40a128ecb8be76883f55"
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "9006f38d4e95b6c190dd066845c9487d", fpath = "/home/kshitij/kvfs/9006f38d4e95b6c190dd066845c9487d"
+    rename returned 0
+
+kvfs_getattr_impl(path="/", statbuf=0xdbffebf0)
+FULLPATH
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686874
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_getattr_impl(path="/", statbuf=0xe0a87bf0)
+FULLPATH
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686874
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_opendir_impl(path="/", statv=0xdb7fdc50)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    opendir returned 0x0x7f9fcc000b50
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f9fcc000b50
+    lock_owner = 0x0000000000000000
+
+kvfs_readdir_impl(path="6666cd76f96956469e7be39d750cc7d9", buf=0xcc000990, filler=0xe1655590, offset=0, fi=0xdbffec50)
+    readdir returned 0x0x7f9fcc000b80
+calling filler with name .
+calling filler with name ..
+calling filler with name 9006f38d4e95b6c190dd066845c9487d
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f9fcc000b50
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f9fcc000b50
+    lock_owner = 0x0000000000000000
+
+kvfs_releasedir_impl(path="6666cd76f96956469e7be39d750cc7d9", fi=0xdb7fdc60)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f9fcc000b50
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f9fcc000b50
+    lock_owner = 0x0000000000000000
+
+kvfs_getattr_impl(path="fd4470862b13f32bfcc3659aa8dc4082", statbuf=0xdbffec20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "fd4470862b13f32bfcc3659aa8dc4082", fpath = "/home/kshitij/kvfs/fd4470862b13f32bfcc3659aa8dc4082"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+kvfs_mkdir_impl(path="fd4470862b13f32bfcc3659aa8dc4082", mode=0775)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "fd4470862b13f32bfcc3659aa8dc4082", fpath = "/home/kshitij/kvfs/fd4470862b13f32bfcc3659aa8dc4082"
+    mkdir returned 0
+
+kvfs_getattr_impl(path="fd4470862b13f32bfcc3659aa8dc4082", statbuf=0xe0a87c20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "fd4470862b13f32bfcc3659aa8dc4082", fpath = "/home/kshitij/kvfs/fd4470862b13f32bfcc3659aa8dc4082"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686901
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_getattr_impl(path="/", statbuf=0xdb7fdbf0)
+FULLPATH
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686874
+    st_mode = 040775
+    st_nlink = 3
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_getattr_impl(path="/", statbuf=0xdbffebf0)
+FULLPATH
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686874
+    st_mode = 040775
+    st_nlink = 3
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_opendir_impl(path="/", statv=0xe0a87c50)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    opendir returned 0x0x7f9fdc001e10
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f9fdc001e10
+    lock_owner = 0x0000000000000000
+
+kvfs_readdir_impl(path="6666cd76f96956469e7be39d750cc7d9", buf=0xdc000af0, filler=0xe1655590, offset=0, fi=0xdb7fdc50)
+    readdir returned 0x0x7f9fdc001e40
+calling filler with name .
+calling filler with name ..
+calling filler with name fd4470862b13f32bfcc3659aa8dc4082
+calling filler with name 9006f38d4e95b6c190dd066845c9487d
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f9fdc001e10
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f9fdc001e10
+    lock_owner = 0x0000000000000000
+
+kvfs_releasedir_impl(path="6666cd76f96956469e7be39d750cc7d9", fi=0xe0a87c60)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f9fdc001e10
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f9fdc001e10
+    lock_owner = 0x0000000000000000
+
+kvfs_getattr_impl(path="/", statbuf=0xdb7fdbf0)
+FULLPATH
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686874
+    st_mode = 040775
+    st_nlink = 3
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+kvfs_rmdir_impl(path="fd4470862b13f32bfcc3659aa8dc4082")
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "fd4470862b13f32bfcc3659aa8dc4082", fpath = "/home/kshitij/kvfs/fd4470862b13f32bfcc3659aa8dc4082"
+    rmdir returned 0
+
+kvfs_getattr_impl(path="/", statbuf=0xdb7fdbf0)
+FULLPATH
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686874
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_getattr_impl(path="/", statbuf=0xdbffebf0)
+FULLPATH
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686874
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_opendir_impl(path="/", statv=0xe0a87c50)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    opendir returned 0x0x7f9fdc001e10
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f9fdc001e10
+    lock_owner = 0x0000000000000000
+
+kvfs_readdir_impl(path="6666cd76f96956469e7be39d750cc7d9", buf=0xdc000af0, filler=0xe1655590, offset=0, fi=0xdb7fdc50)
+    readdir returned 0x0x7f9fdc001e40
+calling filler with name .
+calling filler with name ..
+calling filler with name 9006f38d4e95b6c190dd066845c9487d
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f9fdc001e10
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f9fdc001e10
+    lock_owner = 0x0000000000000000
+
+kvfs_releasedir_impl(path="6666cd76f96956469e7be39d750cc7d9", fi=0xe0a87c60)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f9fdc001e10
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f9fdc001e10
+    lock_owner = 0x0000000000000000
+
+kvfs_getattr_impl(path="e6f42f8f0617dbe31498049be2e8673f", statbuf=0xdb7fdc20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "e6f42f8f0617dbe31498049be2e8673f", fpath = "/home/kshitij/kvfs/e6f42f8f0617dbe31498049be2e8673f"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+kvfs_mknod_impl(path="e6f42f8f0617dbe31498049be2e8673f", mode=0100664, dev=0)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "e6f42f8f0617dbe31498049be2e8673f", fpath = "/home/kshitij/kvfs/e6f42f8f0617dbe31498049be2e8673f"
+    open returned 5
+    close returned 0
+
+kvfs_getattr_impl(path="e6f42f8f0617dbe31498049be2e8673f", statbuf=0xdbffec20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "e6f42f8f0617dbe31498049be2e8673f", fpath = "/home/kshitij/kvfs/e6f42f8f0617dbe31498049be2e8673f"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686901
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_open_impl(path"e6f42f8f0617dbe31498049be2e8673f", fi=0xe0a87d10)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "e6f42f8f0617dbe31498049be2e8673f", fpath = "/home/kshitij/kvfs/e6f42f8f0617dbe31498049be2e8673f"
+    open returned 5
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+kvfs_flush(path="e6f42f8f0617dbe31498049be2e8673f", fi=0xdb7fdd10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0xfa0f39301c9a1e47
+
+kvfs_getattr_impl(path="15aff0cd93fa99d9e9a2d44f5d154bb3", statbuf=0xdbffec20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "15aff0cd93fa99d9e9a2d44f5d154bb3", fpath = "/home/kshitij/kvfs/15aff0cd93fa99d9e9a2d44f5d154bb3"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+kvfs_getattr_impl(path="15aff0cd93fa99d9e9a2d44f5d154bb3", statbuf=0xe0a87c20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "15aff0cd93fa99d9e9a2d44f5d154bb3", fpath = "/home/kshitij/kvfs/15aff0cd93fa99d9e9a2d44f5d154bb3"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+kvfs_flush(path="e6f42f8f0617dbe31498049be2e8673f", fi=0xdb7fdd10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0xfa0f39301c9a1e47
+
+kvfs_flush(path="e6f42f8f0617dbe31498049be2e8673f", fi=0xdbffed10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0xfa0f39301c9a1e47
+
+kvfs_release_impl(path="e6f42f8f0617dbe31498049be2e8673f", fi=0xe0a87d10)
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+kvfs_getattr_impl(path="b5678ed28c3735cfaebba62098d0acff", statbuf=0xdb7fdc20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "b5678ed28c3735cfaebba62098d0acff", fpath = "/home/kshitij/kvfs/b5678ed28c3735cfaebba62098d0acff"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+kvfs_mknod_impl(path="b5678ed28c3735cfaebba62098d0acff", mode=0100664, dev=0)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "b5678ed28c3735cfaebba62098d0acff", fpath = "/home/kshitij/kvfs/b5678ed28c3735cfaebba62098d0acff"
+    open returned 5
+    close returned 0
+
+kvfs_getattr_impl(path="b5678ed28c3735cfaebba62098d0acff", statbuf=0xdbffec20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "b5678ed28c3735cfaebba62098d0acff", fpath = "/home/kshitij/kvfs/b5678ed28c3735cfaebba62098d0acff"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686902
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_open_impl(path"b5678ed28c3735cfaebba62098d0acff", fi=0xe0a87d10)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "b5678ed28c3735cfaebba62098d0acff", fpath = "/home/kshitij/kvfs/b5678ed28c3735cfaebba62098d0acff"
+    open returned 5
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+kvfs_flush(path="b5678ed28c3735cfaebba62098d0acff", fi=0xdb7fdd10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0xef99c9fcfaddbf25
+
+kvfs_getattr_impl(path="46c1d1f5390da734a3064720d0c12e9f", statbuf=0xdbffec20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "46c1d1f5390da734a3064720d0c12e9f", fpath = "/home/kshitij/kvfs/46c1d1f5390da734a3064720d0c12e9f"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+kvfs_getattr_impl(path="46c1d1f5390da734a3064720d0c12e9f", statbuf=0xe0a87c20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "46c1d1f5390da734a3064720d0c12e9f", fpath = "/home/kshitij/kvfs/46c1d1f5390da734a3064720d0c12e9f"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+kvfs_flush(path="b5678ed28c3735cfaebba62098d0acff", fi=0xdb7fdd10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0xef99c9fcfaddbf25
+
+kvfs_flush(path="b5678ed28c3735cfaebba62098d0acff", fi=0xdbffed10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0xef99c9fcfaddbf25
+
+kvfs_release_impl(path="b5678ed28c3735cfaebba62098d0acff", fi=0xe0a87d10)
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+kvfs_getattr_impl(path="/", statbuf=0xdb7fdbf0)
+FULLPATH
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686874
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_getattr_impl(path="15aff0cd93fa99d9e9a2d44f5d154bb3", statbuf=0xdbffec20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "15aff0cd93fa99d9e9a2d44f5d154bb3", fpath = "/home/kshitij/kvfs/15aff0cd93fa99d9e9a2d44f5d154bb3"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+kvfs_getattr_impl(path="15aff0cd93fa99d9e9a2d44f5d154bb3", statbuf=0xe0a87c20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "15aff0cd93fa99d9e9a2d44f5d154bb3", fpath = "/home/kshitij/kvfs/15aff0cd93fa99d9e9a2d44f5d154bb3"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+kvfs_symlink_impl(path="6028ae5077a2ef4cb515da74fd9a3b6d", link="15aff0cd93fa99d9e9a2d44f5d154bb3")
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "15aff0cd93fa99d9e9a2d44f5d154bb3", fpath = "/home/kshitij/kvfs/15aff0cd93fa99d9e9a2d44f5d154bb3"
+    symlink returned 0
+
+kvfs_getattr_impl(path="15aff0cd93fa99d9e9a2d44f5d154bb3", statbuf=0xdb7fdc20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "15aff0cd93fa99d9e9a2d44f5d154bb3", fpath = "/home/kshitij/kvfs/15aff0cd93fa99d9e9a2d44f5d154bb3"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686920
+    st_mode = 0120777
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 32
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_getattr_impl(path="118db42b9a485d9f8dee1a9d24a414b4", statbuf=0xdbffec20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "118db42b9a485d9f8dee1a9d24a414b4", fpath = "/home/kshitij/kvfs/118db42b9a485d9f8dee1a9d24a414b4"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+kvfs_mknod_impl(path="118db42b9a485d9f8dee1a9d24a414b4", mode=0100664, dev=0)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "118db42b9a485d9f8dee1a9d24a414b4", fpath = "/home/kshitij/kvfs/118db42b9a485d9f8dee1a9d24a414b4"
+    open returned 5
+    close returned 0
+
+kvfs_getattr_impl(path="118db42b9a485d9f8dee1a9d24a414b4", statbuf=0xe0a87c20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "118db42b9a485d9f8dee1a9d24a414b4", fpath = "/home/kshitij/kvfs/118db42b9a485d9f8dee1a9d24a414b4"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686921
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_open_impl(path"118db42b9a485d9f8dee1a9d24a414b4", fi=0xdb7fdd10)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "118db42b9a485d9f8dee1a9d24a414b4", fpath = "/home/kshitij/kvfs/118db42b9a485d9f8dee1a9d24a414b4"
+    open returned 5
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+kvfs_flush(path="118db42b9a485d9f8dee1a9d24a414b4", fi=0xdbffed10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x5a98e7a133bd0e3b
+
+kvfs_write_impl(path="118db42b9a485d9f8dee1a9d24a414b4", buf=0xe1a66060, size=26, offset=0, fi=0xe0a87d80)
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pwrite returned 26
+
+kvfs_flush(path="118db42b9a485d9f8dee1a9d24a414b4", fi=0xdb7fdd10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x5a98e7a133bd0e3b
+
+kvfs_release_impl(path="118db42b9a485d9f8dee1a9d24a414b4", fi=0xdbffed10)
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0xbbf91baaa93f1f3a
+    close returned 0
+
+kvfs_getattr_impl(path="46c1d1f5390da734a3064720d0c12e9f", statbuf=0xe0a87c20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "46c1d1f5390da734a3064720d0c12e9f", fpath = "/home/kshitij/kvfs/46c1d1f5390da734a3064720d0c12e9f"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+kvfs_getattr_impl(path="118db42b9a485d9f8dee1a9d24a414b4", statbuf=0xdb7fdbf0)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "118db42b9a485d9f8dee1a9d24a414b4", fpath = "/home/kshitij/kvfs/118db42b9a485d9f8dee1a9d24a414b4"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686921
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 26
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_getattr_impl(path="46c1d1f5390da734a3064720d0c12e9f", statbuf=0xdbffec20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "46c1d1f5390da734a3064720d0c12e9f", fpath = "/home/kshitij/kvfs/46c1d1f5390da734a3064720d0c12e9f"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+kvfs_link_impl(path="118db42b9a485d9f8dee1a9d24a414b4", newpath="46c1d1f5390da734a3064720d0c12e9f")
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "118db42b9a485d9f8dee1a9d24a414b4", fpath = "/home/kshitij/kvfs/118db42b9a485d9f8dee1a9d24a414b4"
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "46c1d1f5390da734a3064720d0c12e9f", fpath = "/home/kshitij/kvfs/46c1d1f5390da734a3064720d0c12e9f"
+    link returned 0
+
+kvfs_getattr_impl(path="46c1d1f5390da734a3064720d0c12e9f", statbuf=0xe0a87c20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "46c1d1f5390da734a3064720d0c12e9f", fpath = "/home/kshitij/kvfs/46c1d1f5390da734a3064720d0c12e9f"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686921
+    st_mode = 0100664
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 26
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_getattr_impl(path="/", statbuf=0xdb7fdbf0)
+FULLPATH
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686874
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_getattr_impl(path="a9e69374c0fcbd579f64ee4db7c4588d", statbuf=0xdbffec20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "a9e69374c0fcbd579f64ee4db7c4588d", fpath = "/home/kshitij/kvfs/a9e69374c0fcbd579f64ee4db7c4588d"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+kvfs_mknod_impl(path="a9e69374c0fcbd579f64ee4db7c4588d", mode=0100664, dev=0)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "a9e69374c0fcbd579f64ee4db7c4588d", fpath = "/home/kshitij/kvfs/a9e69374c0fcbd579f64ee4db7c4588d"
+    open returned 5
+    close returned 0
+
+kvfs_getattr_impl(path="a9e69374c0fcbd579f64ee4db7c4588d", statbuf=0xe0a87c20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "a9e69374c0fcbd579f64ee4db7c4588d", fpath = "/home/kshitij/kvfs/a9e69374c0fcbd579f64ee4db7c4588d"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686922
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_open_impl(path"a9e69374c0fcbd579f64ee4db7c4588d", fi=0xdb7fdd10)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "a9e69374c0fcbd579f64ee4db7c4588d", fpath = "/home/kshitij/kvfs/a9e69374c0fcbd579f64ee4db7c4588d"
+    open returned 5
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+kvfs_flush(path="a9e69374c0fcbd579f64ee4db7c4588d", fi=0xdbffed10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x8fe6b6510656337e
+kvfs_readlink_impl(path="15aff0cd93fa99d9e9a2d44f5d154bb3", link="", size=4097)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "15aff0cd93fa99d9e9a2d44f5d154bb3", fpath = "/home/kshitij/kvfs/15aff0cd93fa99d9e9a2d44f5d154bb3"
+    fpath returned 32
+
+kvfs_opendir_impl(path="/", statv=0xdb7fdc50)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    opendir returned 0x0x7f9fcc008bc0
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f9fcc008bc0
+    lock_owner = 0x0000000000000000
+
+kvfs_getattr_impl(path="/", statbuf=0xdbffebf0)
+FULLPATH
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686874
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_write_impl(path="a9e69374c0fcbd579f64ee4db7c4588d", buf=0xe1a66060, size=5, offset=0, fi=0xe0a87d80)
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pwrite returned 5
+
+kvfs_write_impl(path="a9e69374c0fcbd579f64ee4db7c4588d", buf=0xe1a22060, size=10, offset=5, fi=0xdb7fdd80)
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pwrite returned 10
+
+kvfs_write_impl(path="a9e69374c0fcbd579f64ee4db7c4588d", buf=0xe1a44060, size=16, offset=15, fi=0xdbffed80)
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pwrite returned 16
+
+kvfs_write_impl(path="a9e69374c0fcbd579f64ee4db7c4588d", buf=0xe1a66060, size=1, offset=31, fi=0xe0a87d80)
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pwrite returned 1
+
+kvfs_releasedir_impl(path="6666cd76f96956469e7be39d750cc7d9", fi=0xdb7fdc60)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f9fcc008bc0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f9fcc008bc0
+    lock_owner = 0x0000000000000000
+
+kvfs_flush(path="a9e69374c0fcbd579f64ee4db7c4588d", fi=0xdbffed10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x8fe6b6510656337e
+
+kvfs_flush(path="a9e69374c0fcbd579f64ee4db7c4588d", fi=0xe0a87d10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x8fe6b6510656337e
+
+kvfs_release_impl(path="a9e69374c0fcbd579f64ee4db7c4588d", fi=0xdb7fdd10)
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+kvfs_getattr_impl(path="673ec2e817d69a69a0a8ccbc29c5df46", statbuf=0xdbffec20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "673ec2e817d69a69a0a8ccbc29c5df46", fpath = "/home/kshitij/kvfs/673ec2e817d69a69a0a8ccbc29c5df46"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+kvfs_mknod_impl(path="673ec2e817d69a69a0a8ccbc29c5df46", mode=0100664, dev=0)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "673ec2e817d69a69a0a8ccbc29c5df46", fpath = "/home/kshitij/kvfs/673ec2e817d69a69a0a8ccbc29c5df46"
+    open returned 5
+    close returned 0
+
+kvfs_getattr_impl(path="673ec2e817d69a69a0a8ccbc29c5df46", statbuf=0xe0a87c20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "673ec2e817d69a69a0a8ccbc29c5df46", fpath = "/home/kshitij/kvfs/673ec2e817d69a69a0a8ccbc29c5df46"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686923
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_open_impl(path"673ec2e817d69a69a0a8ccbc29c5df46", fi=0xdb7fdd10)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "673ec2e817d69a69a0a8ccbc29c5df46", fpath = "/home/kshitij/kvfs/673ec2e817d69a69a0a8ccbc29c5df46"
+    open returned 5
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+kvfs_flush(path="673ec2e817d69a69a0a8ccbc29c5df46", fi=0xdbffed10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x2525f5bcfcc46550
+
+kvfs_open_impl(path"46c1d1f5390da734a3064720d0c12e9f", fi=0xe0a87d10)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "46c1d1f5390da734a3064720d0c12e9f", fpath = "/home/kshitij/kvfs/46c1d1f5390da734a3064720d0c12e9f"
+    open returned 6
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+
+kvfs_read_impl(path="46c1d1f5390da734a3064720d0c12e9f", buf=0xcc001060, size=4096, offset=0, fi=0xdb7fdd10)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000006
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+    pread returned 26
+
+kvfs_write_impl(path="673ec2e817d69a69a0a8ccbc29c5df46", buf=0xe1a44060, size=26, offset=0, fi=0xdbffed80)
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pwrite returned 26
+
+kvfs_fgetattr_impl(path="46c1d1f5390da734a3064720d0c12e9f", statbuf=0xe0a87bf0, fi=0xe0a87d10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000006
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+    si:
+    st_dev = 2050
+    st_ino = 6686921
+    st_mode = 0100664
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 26
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_flush(path="46c1d1f5390da734a3064720d0c12e9f", fi=0xdb7fdd10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000006
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x2525f5bcfcc46550
+
+kvfs_release_impl(path="46c1d1f5390da734a3064720d0c12e9f", fi=0xdbffed10)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000006
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+
+kvfs_flush(path="673ec2e817d69a69a0a8ccbc29c5df46", fi=0xe0a87d10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+    fh = 0x0000000000000005
+    lock_owner = 0x2525f5bcfcc46550
+    close returned 0
+
+kvfs_flush(path="673ec2e817d69a69a0a8ccbc29c5df46", fi=0xdbffed10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x2525f5bcfcc46550
+
+kvfs_release_impl(path="673ec2e817d69a69a0a8ccbc29c5df46", fi=0xdb7fdd10)
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+kvfs_open_impl(path"a9e69374c0fcbd579f64ee4db7c4588d", fi=0xe0a87d10)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "a9e69374c0fcbd579f64ee4db7c4588d", fpath = "/home/kshitij/kvfs/a9e69374c0fcbd579f64ee4db7c4588d"
+    open returned 5
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+kvfs_getattr_impl(path="a9e69374c0fcbd579f64ee4db7c4588d", statbuf=0xdbffebf0)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "a9e69374c0fcbd579f64ee4db7c4588d", fpath = "/home/kshitij/kvfs/a9e69374c0fcbd579f64ee4db7c4588d"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686922
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 32
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_read_impl(path="a9e69374c0fcbd579f64ee4db7c4588d", buf=0xcc001090, size=4096, offset=0, fi=0xdb7fdd10)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pread returned 32
+
+kvfs_fgetattr_impl(path="a9e69374c0fcbd579f64ee4db7c4588d", statbuf=0xe0a87bf0, fi=0xe0a87d10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    si:
+    st_dev = 2050
+    st_ino = 6686922
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 32
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_flush(path="a9e69374c0fcbd579f64ee4db7c4588d", fi=0xdbffed10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0xca95b8f86cb904b2
+
+kvfs_release_impl(path="a9e69374c0fcbd579f64ee4db7c4588d", fi=0xdb7fdd10)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+kvfs_open_impl(path"673ec2e817d69a69a0a8ccbc29c5df46", fi=0xe0a87d10)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "673ec2e817d69a69a0a8ccbc29c5df46", fpath = "/home/kshitij/kvfs/673ec2e817d69a69a0a8ccbc29c5df46"
+    open returned 5
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+kvfs_getattr_impl(path="673ec2e817d69a69a0a8ccbc29c5df46", statbuf=0xdbffebf0)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "673ec2e817d69a69a0a8ccbc29c5df46", fpath = "/home/kshitij/kvfs/673ec2e817d69a69a0a8ccbc29c5df46"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686923
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 26
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_read_impl(path="673ec2e817d69a69a0a8ccbc29c5df46", buf=0xcc0020d0, size=4096, offset=0, fi=0xdb7fdd10)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pread returned 26
+
+kvfs_fgetattr_impl(path="673ec2e817d69a69a0a8ccbc29c5df46", statbuf=0xe0a87bf0, fi=0xe0a87d10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    si:
+    st_dev = 2050
+    st_ino = 6686923
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 26
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_flush(path="673ec2e817d69a69a0a8ccbc29c5df46", fi=0xdbffed10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0xc257536f80014f24
+
+kvfs_release_impl(path="673ec2e817d69a69a0a8ccbc29c5df46", fi=0xdb7fdd10)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+kvfs_getattr_impl(path="/", statbuf=0xe0a87bf0)
+FULLPATH
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686874
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_getattr_impl(path="9006f38d4e95b6c190dd066845c9487d", statbuf=0xdbffebf0)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "9006f38d4e95b6c190dd066845c9487d", fpath = "/home/kshitij/kvfs/9006f38d4e95b6c190dd066845c9487d"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686667
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 60
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_chmod_impl(fpath="9006f38d4e95b6c190dd066845c9487d", mode=0100300)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "9006f38d4e95b6c190dd066845c9487d", fpath = "/home/kshitij/kvfs/9006f38d4e95b6c190dd066845c9487d"
+    chmod returned 0
+
+kvfs_getattr_impl(path="9006f38d4e95b6c190dd066845c9487d", statbuf=0xdb7fdb60)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "9006f38d4e95b6c190dd066845c9487d", fpath = "/home/kshitij/kvfs/9006f38d4e95b6c190dd066845c9487d"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686667
+    st_mode = 0100300
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 60
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_getattr_impl(path="520d158710580f0f62046d1412e2c5d7", statbuf=0xdbffec20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "520d158710580f0f62046d1412e2c5d7", fpath = "/home/kshitij/kvfs/520d158710580f0f62046d1412e2c5d7"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+kvfs_mknod_impl(path="520d158710580f0f62046d1412e2c5d7", mode=0100664, dev=0)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "520d158710580f0f62046d1412e2c5d7", fpath = "/home/kshitij/kvfs/520d158710580f0f62046d1412e2c5d7"
+    open returned 5
+    close returned 0
+
+kvfs_getattr_impl(path="520d158710580f0f62046d1412e2c5d7", statbuf=0xdb7fdc20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "520d158710580f0f62046d1412e2c5d7", fpath = "/home/kshitij/kvfs/520d158710580f0f62046d1412e2c5d7"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686924
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_open_impl(path"520d158710580f0f62046d1412e2c5d7", fi=0xe0a87d10)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "520d158710580f0f62046d1412e2c5d7", fpath = "/home/kshitij/kvfs/520d158710580f0f62046d1412e2c5d7"
+    open returned 5
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+kvfs_flush(path="520d158710580f0f62046d1412e2c5d7", fi=0xdbffed10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x1aa905f5481e206b
+
+kvfs_open_impl(path"9006f38d4e95b6c190dd066845c9487d", fi=0xdb7fdd10)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "9006f38d4e95b6c190dd066845c9487d", fpath = "/home/kshitij/kvfs/9006f38d4e95b6c190dd066845c9487d"
+    open returned -1
+    ERROR open: Permission denied
+    ERROR open: Permission denied
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xfffffffffffffff3
+    lock_owner = 0x0000000000000000
+
+kvfs_write_impl(path="520d158710580f0f62046d1412e2c5d7", buf=0xe1a66060, size=5, offset=0, fi=0xe0a87d80)
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pwrite returned 5
+
+kvfs_write_impl(path="520d158710580f0f62046d1412e2c5d7", buf=0xe1a44060, size=10, offset=5, fi=0xdbffed80)
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pwrite returned 10
+
+kvfs_write_impl(path="520d158710580f0f62046d1412e2c5d7", buf=0xe1a22060, size=19, offset=15, fi=0xdb7fdd80)
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pwrite returned 19
+
+kvfs_write_impl(path="520d158710580f0f62046d1412e2c5d7", buf=0xe1a66060, size=1, offset=34, fi=0xe0a87d80)
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pwrite returned 1
+
+kvfs_flush(path="520d158710580f0f62046d1412e2c5d7", fi=0xdbffed10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x1aa905f5481e206b
+
+kvfs_flush(path="520d158710580f0f62046d1412e2c5d7", fi=0xdb7fdd10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x1aa905f5481e206b
+
+kvfs_release_impl(path="520d158710580f0f62046d1412e2c5d7", fi=0xe0a87d10)
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+kvfs_getattr_impl(path="/", statbuf=0xdbffebf0)
+FULLPATH
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686874
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_open_impl(path"520d158710580f0f62046d1412e2c5d7", fi=0xdb7fdd10)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "520d158710580f0f62046d1412e2c5d7", fpath = "/home/kshitij/kvfs/520d158710580f0f62046d1412e2c5d7"
+    open returned 5
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+kvfs_getattr_impl(path="520d158710580f0f62046d1412e2c5d7", statbuf=0xe0a87bf0)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "520d158710580f0f62046d1412e2c5d7", fpath = "/home/kshitij/kvfs/520d158710580f0f62046d1412e2c5d7"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686924
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 35
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_read_impl(path="520d158710580f0f62046d1412e2c5d7", buf=0xd4001560, size=4096, offset=0, fi=0xdbffed10)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pread returned 35
+
+kvfs_fgetattr_impl(path="520d158710580f0f62046d1412e2c5d7", statbuf=0xdb7fdbf0, fi=0xdb7fdd10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    si:
+    st_dev = 2050
+    st_ino = 6686924
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 35
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_flush(path="520d158710580f0f62046d1412e2c5d7", fi=0xe0a87d10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x92e7ff1fba006c52
+
+kvfs_release_impl(path="520d158710580f0f62046d1412e2c5d7", fi=0xdbffed10)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+kvfs_chmod_impl(fpath="9006f38d4e95b6c190dd066845c9487d", mode=0100770)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "9006f38d4e95b6c190dd066845c9487d", fpath = "/home/kshitij/kvfs/9006f38d4e95b6c190dd066845c9487d"
+    chmod returned 0
+
+kvfs_getattr_impl(path="9006f38d4e95b6c190dd066845c9487d", statbuf=0xdb7fdb60)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "9006f38d4e95b6c190dd066845c9487d", fpath = "/home/kshitij/kvfs/9006f38d4e95b6c190dd066845c9487d"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686667
+    st_mode = 0100770
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 60
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_open_impl(path"9006f38d4e95b6c190dd066845c9487d", fi=0xe0a87d10)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "9006f38d4e95b6c190dd066845c9487d", fpath = "/home/kshitij/kvfs/9006f38d4e95b6c190dd066845c9487d"
+    open returned 5
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+kvfs_read_impl(path="9006f38d4e95b6c190dd066845c9487d", buf=0xd40025a0, size=4096, offset=0, fi=0xdbffed10)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pread returned 60
+
+kvfs_fgetattr_impl(path="9006f38d4e95b6c190dd066845c9487d", statbuf=0xdb7fdbf0, fi=0xdb7fdd10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    si:
+    st_dev = 2050
+    st_ino = 6686667
+    st_mode = 0100770
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 60
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_flush(path="9006f38d4e95b6c190dd066845c9487d", fi=0xe0a87d10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x1aa905f5481e206b
+
+kvfs_release_impl(path="9006f38d4e95b6c190dd066845c9487d", fi=0xdbffed10)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+kvfs_open_impl(path"9006f38d4e95b6c190dd066845c9487d", fi=0xdb7fdd10)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "9006f38d4e95b6c190dd066845c9487d", fpath = "/home/kshitij/kvfs/9006f38d4e95b6c190dd066845c9487d"
+    open returned 5
+    fi:
+    flags = 0x00008801
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+kvfs_ftruncate_impl(path="9006f38d4e95b6c190dd066845c9487d", offset=40, fi=0xe0a87c80)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+kvfs_fgetattr_impl(path="9006f38d4e95b6c190dd066845c9487d", statbuf=0xe0a87b60, fi=0xe0a87c80)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    si:
+    st_dev = 2050
+    st_ino = 6686667
+    st_mode = 0100770
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 40
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_flush(path="9006f38d4e95b6c190dd066845c9487d", fi=0xdbffed10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0xc49a6cdaab3e6faf
+
+kvfs_release_impl(path="9006f38d4e95b6c190dd066845c9487d", fi=0xdb7fdd10)
+    fi:
+    flags = 0x00008801
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+kvfs_open_impl(path"9006f38d4e95b6c190dd066845c9487d", fi=0xe0a87d10)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "9006f38d4e95b6c190dd066845c9487d", fpath = "/home/kshitij/kvfs/9006f38d4e95b6c190dd066845c9487d"
+    open returned 5
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+kvfs_read_impl(path="9006f38d4e95b6c190dd066845c9487d", buf=0xd40025a0, size=4096, offset=0, fi=0xdbffed10)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pread returned 40
+
+kvfs_fgetattr_impl(path="9006f38d4e95b6c190dd066845c9487d", statbuf=0xdb7fdbf0, fi=0xdb7fdd10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    si:
+    st_dev = 2050
+    st_ino = 6686667
+    st_mode = 0100770
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 40
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_flush(path="9006f38d4e95b6c190dd066845c9487d", fi=0xe0a87d10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0xc257536f80014f24
+
+kvfs_release_impl(path="9006f38d4e95b6c190dd066845c9487d", fi=0xdbffed10)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+kvfs_opendir_impl(path="/", statv=0xdb7fdc50)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    opendir returned 0x0x7f9fcc008bc0
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f9fcc008bc0
+    lock_owner = 0x0000000000000000
+
+kvfs_readdir_impl(path="6666cd76f96956469e7be39d750cc7d9", buf=0xcc000ea0, filler=0xe1655590, offset=0, fi=0xe0a87c50)
+    readdir returned 0x0x7f9fcc008bf0
+calling filler with name 15aff0cd93fa99d9e9a2d44f5d154bb3
+calling filler with name 46c1d1f5390da734a3064720d0c12e9f
+calling filler with name 118db42b9a485d9f8dee1a9d24a414b4
+calling filler with name .
+calling filler with name 673ec2e817d69a69a0a8ccbc29c5df46
+calling filler with name e6f42f8f0617dbe31498049be2e8673f
+calling filler with name ..
+calling filler with name 520d158710580f0f62046d1412e2c5d7
+calling filler with name 9006f38d4e95b6c190dd066845c9487d
+calling filler with name a9e69374c0fcbd579f64ee4db7c4588d
+calling filler with name b5678ed28c3735cfaebba62098d0acff
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f9fcc008bc0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f9fcc008bc0
+    lock_owner = 0x0000000000000000
+
+kvfs_releasedir_impl(path="6666cd76f96956469e7be39d750cc7d9", fi=0xdb7fdc60)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f9fcc008bc0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f9fcc008bc0
+    lock_owner = 0x0000000000000000
+
+kvfs_getattr_impl(path="/", statbuf=0xe0a87bf0)
+FULLPATH
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686874
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_getattr_impl(path="d996b4666f4995d000bbf7c4ebc7a62d", statbuf=0xdbffec20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "d996b4666f4995d000bbf7c4ebc7a62d", fpath = "/home/kshitij/kvfs/d996b4666f4995d000bbf7c4ebc7a62d"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+kvfs_mknod_impl(path="d996b4666f4995d000bbf7c4ebc7a62d", mode=0100664, dev=0)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "d996b4666f4995d000bbf7c4ebc7a62d", fpath = "/home/kshitij/kvfs/d996b4666f4995d000bbf7c4ebc7a62d"
+    open returned 5
+    close returned 0
+
+kvfs_getattr_impl(path="d996b4666f4995d000bbf7c4ebc7a62d", statbuf=0xdb7fdc20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "d996b4666f4995d000bbf7c4ebc7a62d", fpath = "/home/kshitij/kvfs/d996b4666f4995d000bbf7c4ebc7a62d"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686925
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_open_impl(path"d996b4666f4995d000bbf7c4ebc7a62d", fi=0xe0a87d10)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "d996b4666f4995d000bbf7c4ebc7a62d", fpath = "/home/kshitij/kvfs/d996b4666f4995d000bbf7c4ebc7a62d"
+    open returned 5
+    fi:
+    flags = 0x00008801
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+kvfs_flush(path="d996b4666f4995d000bbf7c4ebc7a62d", fi=0xdbffed10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0xcc0f2c8d46214244
+
+kvfs_utime_impl(path="d996b4666f4995d000bbf7c4ebc7a62d", ubuf=0xdb7fdaf0)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "d996b4666f4995d000bbf7c4ebc7a62d", fpath = "/home/kshitij/kvfs/d996b4666f4995d000bbf7c4ebc7a62d"
+    utime returned 0
+
+kvfs_getattr_impl(path="d996b4666f4995d000bbf7c4ebc7a62d", statbuf=0xdb7fdb60)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "d996b4666f4995d000bbf7c4ebc7a62d", fpath = "/home/kshitij/kvfs/d996b4666f4995d000bbf7c4ebc7a62d"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686925
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_flush(path="d996b4666f4995d000bbf7c4ebc7a62d", fi=0xe0a87d10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0xcc0f2c8d46214244
+
+kvfs_release_impl(path="d996b4666f4995d000bbf7c4ebc7a62d", fi=0xdbffed10)
+    fi:
+    flags = 0x00008801
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+kvfs_getattr_impl(path="/", statbuf=0xdb7fdbf0)
+FULLPATH
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686874
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_getattr_impl(path="/", statbuf=0xe0a87bf0)
+FULLPATH
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686874
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_opendir_impl(path="/", statv=0xdbffec50)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    opendir returned 0x0x7f9fd40025a0
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f9fd40025a0
+    lock_owner = 0x0000000000000000
+
+kvfs_readdir_impl(path="6666cd76f96956469e7be39d750cc7d9", buf=0xd4000990, filler=0xe1655590, offset=0, fi=0xdb7fdc50)
+    readdir returned 0x0x7f9fd40025d0
+calling filler with name 15aff0cd93fa99d9e9a2d44f5d154bb3
+calling filler with name 46c1d1f5390da734a3064720d0c12e9f
+calling filler with name 118db42b9a485d9f8dee1a9d24a414b4
+calling filler with name .
+calling filler with name 673ec2e817d69a69a0a8ccbc29c5df46
+calling filler with name e6f42f8f0617dbe31498049be2e8673f
+calling filler with name d996b4666f4995d000bbf7c4ebc7a62d
+calling filler with name ..
+calling filler with name 520d158710580f0f62046d1412e2c5d7
+calling filler with name 9006f38d4e95b6c190dd066845c9487d
+calling filler with name a9e69374c0fcbd579f64ee4db7c4588d
+calling filler with name b5678ed28c3735cfaebba62098d0acff
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f9fd40025a0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f9fd40025a0
+    lock_owner = 0x0000000000000000
+
+kvfs_releasedir_impl(path="6666cd76f96956469e7be39d750cc7d9", fi=0xdbffec60)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f9fd40025a0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f9fd40025a0
+    lock_owner = 0x0000000000000000
+
+kvfs_getattr_impl(path="16b67461bafc73f9f3cc5675ea266192", statbuf=0xdb7fdc20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "16b67461bafc73f9f3cc5675ea266192", fpath = "/home/kshitij/kvfs/16b67461bafc73f9f3cc5675ea266192"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+kvfs_mkdir_impl(path="16b67461bafc73f9f3cc5675ea266192", mode=0775)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "16b67461bafc73f9f3cc5675ea266192", fpath = "/home/kshitij/kvfs/16b67461bafc73f9f3cc5675ea266192"
+    mkdir returned 0
+
+kvfs_getattr_impl(path="16b67461bafc73f9f3cc5675ea266192", statbuf=0xe0a87c20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "16b67461bafc73f9f3cc5675ea266192", fpath = "/home/kshitij/kvfs/16b67461bafc73f9f3cc5675ea266192"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686926
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_getattr_impl(path="44f9e85a5d57989654f860a7eade8fbc", statbuf=0xdbffec20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "44f9e85a5d57989654f860a7eade8fbc", fpath = "/home/kshitij/kvfs/44f9e85a5d57989654f860a7eade8fbc"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+kvfs_mknod_impl(path="44f9e85a5d57989654f860a7eade8fbc", mode=0100664, dev=0)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "44f9e85a5d57989654f860a7eade8fbc", fpath = "/home/kshitij/kvfs/44f9e85a5d57989654f860a7eade8fbc"
+    open returned 5
+    close returned 0
+
+kvfs_getattr_impl(path="44f9e85a5d57989654f860a7eade8fbc", statbuf=0xdb7fdc20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "44f9e85a5d57989654f860a7eade8fbc", fpath = "/home/kshitij/kvfs/44f9e85a5d57989654f860a7eade8fbc"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686927
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_open_impl(path"44f9e85a5d57989654f860a7eade8fbc", fi=0xe0a87d10)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "44f9e85a5d57989654f860a7eade8fbc", fpath = "/home/kshitij/kvfs/44f9e85a5d57989654f860a7eade8fbc"
+    open returned 5
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+kvfs_flush(path="44f9e85a5d57989654f860a7eade8fbc", fi=0xdbffed10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x5a98e7a133bd0e3b
+
+kvfs_getattr_impl(path="/", statbuf=0xdb7fdbf0)
+FULLPATH
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686874
+    st_mode = 040775
+    st_nlink = 3
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+    kvfs_fullpath:  path = "/opendir"
+
+kvfs_access_impl(path="16b67461bafc73f9f3cc5675ea266192")
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "16b67461bafc73f9f3cc5675ea266192", fpath = "/home/kshitij/kvfs/16b67461bafc73f9f3cc5675ea266192"
+
+kvfs_flush(path="44f9e85a5d57989654f860a7eade8fbc", fi=0xdbffed10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x5a98e7a133bd0e3b
+
+kvfs_flush(path="44f9e85a5d57989654f860a7eade8fbc", fi=0xdb7fdd10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x5a98e7a133bd0e3b
+
+kvfs_release_impl(path="44f9e85a5d57989654f860a7eade8fbc", fi=0xe0a87d10)
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x55c7e5c34821e652
+    close returned 0
+    kvfs_fullpath:  path = "/opendir"
+
+kvfs_access_impl(path="16b67461bafc73f9f3cc5675ea266192")
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "16b67461bafc73f9f3cc5675ea266192", fpath = "/home/kshitij/kvfs/16b67461bafc73f9f3cc5675ea266192"
+
+kvfs_open_impl(path"44f9e85a5d57989654f860a7eade8fbc", fi=0xdb7fdd10)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "44f9e85a5d57989654f860a7eade8fbc", fpath = "/home/kshitij/kvfs/44f9e85a5d57989654f860a7eade8fbc"
+    open returned 5
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+kvfs_read_impl(path="44f9e85a5d57989654f860a7eade8fbc", buf=0xdc001e10, size=4096, offset=0, fi=0xe0a87d10)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pread returned 0
+
+kvfs_flush(path="44f9e85a5d57989654f860a7eade8fbc", fi=0xdbffed10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0xcc0f2c8d46214244
+
+kvfs_release_impl(path="44f9e85a5d57989654f860a7eade8fbc", fi=0xdb7fdd10)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+kvfs_open_impl(path"44f9e85a5d57989654f860a7eade8fbc", fi=0xe0a87d10)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "44f9e85a5d57989654f860a7eade8fbc", fpath = "/home/kshitij/kvfs/44f9e85a5d57989654f860a7eade8fbc"
+    open returned 5
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+kvfs_getattr_impl(path="44f9e85a5d57989654f860a7eade8fbc", statbuf=0xdbffebf0)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "44f9e85a5d57989654f860a7eade8fbc", fpath = "/home/kshitij/kvfs/44f9e85a5d57989654f860a7eade8fbc"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686927
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_read_impl(path="44f9e85a5d57989654f860a7eade8fbc", buf=0xcc0020d0, size=4096, offset=0, fi=0xdb7fdd10)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pread returned 0
+
+kvfs_flush(path="44f9e85a5d57989654f860a7eade8fbc", fi=0xe0a87d10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x42a198df9497ff43
+
+kvfs_release_impl(path="44f9e85a5d57989654f860a7eade8fbc", fi=0xdbffed10)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+kvfs_opendir_impl(path="16b67461bafc73f9f3cc5675ea266192", statv=0xdb7fdc50)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "16b67461bafc73f9f3cc5675ea266192", fpath = "/home/kshitij/kvfs/16b67461bafc73f9f3cc5675ea266192"
+    opendir returned 0x0x7f9fcc008bc0
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f9fcc008bc0
+    lock_owner = 0x0000000000000000
+
+kvfs_readdir_impl(path="16b67461bafc73f9f3cc5675ea266192", buf=0xcc0013f0, filler=0xe1655590, offset=0, fi=0xe0a87c50)
+    readdir returned 0x0x7f9fcc008bf0
+calling filler with name .
+calling filler with name ..
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f9fcc008bc0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f9fcc008bc0
+    lock_owner = 0x0000000000000000
+
+kvfs_releasedir_impl(path="16b67461bafc73f9f3cc5675ea266192", fi=0xdb7fdc60)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f9fcc008bc0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f9fcc008bc0
+    lock_owner = 0x0000000000000000
+
+kvfs_getattr_impl(path="16b67461bafc73f9f3cc5675ea266192", statbuf=0xe0a87bf0)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "16b67461bafc73f9f3cc5675ea266192", fpath = "/home/kshitij/kvfs/16b67461bafc73f9f3cc5675ea266192"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686926
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+    kvfs_fullpath:  path = "/"
+
+kvfs_access_impl(path="/")
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+
+kvfs_getattr_impl(path="f3e5e60759cf93da8294214bc85ee05f", statbuf=0xdb7fdc20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "f3e5e60759cf93da8294214bc85ee05f", fpath = "/home/kshitij/kvfs/f3e5e60759cf93da8294214bc85ee05f"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+kvfs_mknod_impl(path="f3e5e60759cf93da8294214bc85ee05f", mode=0100664, dev=0)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "f3e5e60759cf93da8294214bc85ee05f", fpath = "/home/kshitij/kvfs/f3e5e60759cf93da8294214bc85ee05f"
+    open returned 5
+    close returned 0
+
+kvfs_getattr_impl(path="f3e5e60759cf93da8294214bc85ee05f", statbuf=0xe0a87c20)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "f3e5e60759cf93da8294214bc85ee05f", fpath = "/home/kshitij/kvfs/f3e5e60759cf93da8294214bc85ee05f"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686928
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_open_impl(path"f3e5e60759cf93da8294214bc85ee05f", fi=0xdbffed10)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "f3e5e60759cf93da8294214bc85ee05f", fpath = "/home/kshitij/kvfs/f3e5e60759cf93da8294214bc85ee05f"
+    open returned 5
+    fi:
+    flags = 0x00008801
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+kvfs_flush(path="f3e5e60759cf93da8294214bc85ee05f", fi=0xdb7fdd10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x2525f5bcfcc46550
+
+kvfs_utime_impl(path="f3e5e60759cf93da8294214bc85ee05f", ubuf=0xe0a87af0)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "f3e5e60759cf93da8294214bc85ee05f", fpath = "/home/kshitij/kvfs/f3e5e60759cf93da8294214bc85ee05f"
+    utime returned 0
+
+kvfs_getattr_impl(path="f3e5e60759cf93da8294214bc85ee05f", statbuf=0xe0a87b60)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "f3e5e60759cf93da8294214bc85ee05f", fpath = "/home/kshitij/kvfs/f3e5e60759cf93da8294214bc85ee05f"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686928
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_flush(path="f3e5e60759cf93da8294214bc85ee05f", fi=0xdbffed10)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x2525f5bcfcc46550
+
+kvfs_release_impl(path="f3e5e60759cf93da8294214bc85ee05f", fi=0xdb7fdd10)
+    fi:
+    flags = 0x00008801
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+kvfs_getattr_impl(path="/", statbuf=0xe0a87bf0)
+FULLPATH
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686874
+    st_mode = 040775
+    st_nlink = 3
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_getattr_impl(path="/", statbuf=0xdbffebf0)
+FULLPATH
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    lstat returned 0
+    si:
+    st_dev = 2050
+    st_ino = 6686874
+    st_mode = 040775
+    st_nlink = 3
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x583df1af
+    st_mtime = 0x583df1af
+    st_ctime = 0x583df1af
+
+kvfs_opendir_impl(path="/", statv=0xdb7fdc50)
+    Full Path:  rootdir = "/home/kshitij/kvfs", path = "/", fpath = "/home/kshitij/kvfs//"
+    opendir returned 0x0x7f9fcc008bc0
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f9fcc008bc0
+    lock_owner = 0x0000000000000000
+
+kvfs_readdir_impl(path="6666cd76f96956469e7be39d750cc7d9", buf=0xcc0013f0, filler=0xe1655590, offset=0, fi=0xe0a87c50)
+    readdir returned 0x0x7f9fcc008bf0
+calling filler with name 16b67461bafc73f9f3cc5675ea266192
+calling filler with name 15aff0cd93fa99d9e9a2d44f5d154bb3
+calling filler with name 46c1d1f5390da734a3064720d0c12e9f
+calling filler with name 118db42b9a485d9f8dee1a9d24a414b4
+calling filler with name 44f9e85a5d57989654f860a7eade8fbc
+calling filler with name .
+calling filler with name 673ec2e817d69a69a0a8ccbc29c5df46
+calling filler with name f3e5e60759cf93da8294214bc85ee05f
+calling filler with name e6f42f8f0617dbe31498049be2e8673f
+calling filler with name d996b4666f4995d000bbf7c4ebc7a62d
+calling filler with name ..
+calling filler with name 520d158710580f0f62046d1412e2c5d7
+calling filler with name 9006f38d4e95b6c190dd066845c9487d
+calling filler with name a9e69374c0fcbd579f64ee4db7c4588d
+calling filler with name b5678ed28c3735cfaebba62098d0acff
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f9fcc008bc0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f9fcc008bc0
+    lock_owner = 0x0000000000000000
+
+kvfs_releasedir_impl(path="6666cd76f96956469e7be39d750cc7d9", fi=0xdb7fdc60)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f9fcc008bc0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f9fcc008bc0
+    lock_owner = 0x0000000000000000
+
+kvfs_destroy(userdata=0x00ed7010)
